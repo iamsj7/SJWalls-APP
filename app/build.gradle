@@ -15,6 +15,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
 
 android {
     signingConfigs {
@@ -100,6 +101,9 @@ android {
 }
 
 dependencies {
+
+  // Add the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
     implementation Libs.oneSignal
