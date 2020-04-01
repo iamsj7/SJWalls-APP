@@ -19,7 +19,7 @@ class MainActivity : FramesActivity() {
      * This is your app's license key. Get yours on Google Play Dev Console.
      * Default one isn't valid and could cause issues in your app.
      */
-    override fun getLicKey(): String? = "MIIBIjANBgkqhkiGgKglYGYGihLuihUuhhuBlouBkuiu"
+    override fun getLicKey(): String? = ""
 
     /**
      * This is the license checker code. Feel free to create your own implementation or
