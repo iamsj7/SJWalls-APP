@@ -5,24 +5,24 @@
         android:id="@+id/details"
         android:icon="@drawable/ic_details"
         android:orderInCategory="100"
-        android:title="@string/details"
+        android:title=""
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/download"
         android:icon="@drawable/ic_download"
         android:orderInCategory="200"
-        android:title="@string/download"
+        android:title=""
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/apply"
         android:icon="@drawable/ic_apply"
         android:orderInCategory="300"
-        android:title="@string/apply"
+        android:title=""
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/favorites"
         android:icon="@drawable/ic_favorite_check"
         android:orderInCategory="400"
-        android:title="@string/favorites"
+        android:title=""
         app:showAsAction="ifRoom" />
 </menu>
