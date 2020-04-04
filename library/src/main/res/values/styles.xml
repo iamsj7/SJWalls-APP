@@ -56,7 +56,7 @@
         <item name="materialCardViewStyle">@style/Widget.Frames.MaterialCardView</item>
         <item name="bottomSheetDialogTheme">@style/Frames.BottomSheetDialog</item>
         <item name="navigationViewStyle">@style/Widget.Frames.NavigationView</item>
-        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>
 
         <item name="shapeAppearanceSmallComponent">
             @style/ShapeAppearance.Frames.SmallComponent
