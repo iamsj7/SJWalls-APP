@@ -1,4 +1,4 @@
-package dev.jahir.frames.app
+package com.shaikjaleel.SJWalls
 
 import com.onesignal.NotificationExtenderService
 import com.onesignal.OSNotificationReceivedResult

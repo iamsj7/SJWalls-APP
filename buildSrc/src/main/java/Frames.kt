@@ -1,7 +1,7 @@
 @file:Suppress("unused")
 
 object Frames {
-    const val appId = "dev.jahir.frames.app"
-    const val version = 311
-    const val versionName = "3.1.1"
+    const val appId = "com.shaikjaleel.SJWalls"
+    const val version = 101
+    const val versionName = "1.0.1"
 }

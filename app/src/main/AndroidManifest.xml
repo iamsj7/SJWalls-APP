@@ -1,12 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="dev.jahir.frames.app">
+    package="com.shaikjaleel.SJWalls">
 
     <!-- Permission required for donations. Remove it if you don't use it -->
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.shaikjaleel.SJWalls.MyApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +19,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.shaikjaleel.SJWalls.MainActivity"
             android:label="@string/app_name">
 
             <!-- TODO: Do NOT remove the intent-filter tags -->
@@ -74,7 +74,7 @@
 
         <!-- OneSignal Notifications Service -->
         <service
-            android:name=".NotificationService"
+            android:name="com.shaikjaleel.SJWalls.NotificationService"
             android:exported="false"
             android:permission="android.permission.BIND_JOB_SERVICE">
             <intent-filter>
