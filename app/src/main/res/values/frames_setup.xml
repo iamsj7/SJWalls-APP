@@ -37,8 +37,8 @@
     Show a custom image as placeholder while loading wallpapers or collections
     Use drawable name without extensions
     -->
-    <string name="wallpapers_placeholder" translatable="false"></string>
-    <string name="collections_placeholder" translatable="false"></string>
+    <string name="wallpapers_placeholder" translatable="false">wallpaperplaceholder</string>
+    <string name="collections_placeholder" translatable="false">collectionsplaceholder</string>
 
     <!-- These are your donation items. Only put their ids here -->
     <string-array name="donation_items"></string-array>
