@@ -80,7 +80,7 @@ Free, feature-rich, wallpapers app
 ## JOIN
 Join  on Telegram For APP Updates & More [![Telegram Chat](https://img.shields.io/badge/Telegram-Chat-0088cc.svg)](https://t.me/SJWALLS)
 
-# Pull Request For New Wallpapers are Allowed.
+### Pull Request For New Wallpapers are Allowed.
 
 
 ## FRAME DASHBOARD
