@@ -20,16 +20,16 @@ apply plugin: 'com.google.gms.google-services'
 android {
     signingConfigs {
         release {
-            keyAlias 'frames'
-            keyPassword 'frames'
-            storeFile file('frames.jks')
-            storePassword 'frames'
+            keyAlias 'sjwalls'
+            keyPassword 'sjwalls'
+            storeFile file('sjwalls.jks')
+            storePassword 'iamsj7'
         }
     }
 
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
-            outputFileName = defaultConfig.applicationId + "-v${variant.versionName}-${variant.name}.apk"
+            outputFileName = Frames.AppName + "-v${variant.versionName}-${variant.name}.apk"
         }
     }
 

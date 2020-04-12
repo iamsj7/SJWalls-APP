@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <version title="v1.0.0" />
-    <item text="Initial Changelog" />
-    <item text="Bullet point here" />
-    <item text="More points" />
-    <item text="" /> <!-- this one is empty and therefore ignored -->
+    <version title="v1.1.0" />
+    <item text="SJWalls: Updated Theme/Colors" />
+    <item text="SJWalls: Added Dummy Wallpaper holder" />
+    <item text="SJWalls: Implement FastScrollRecyclerView."/>
+	<item text="SJWalls: Tint edgeEffect with accent color" />
+	<item text="SJWalls: Fix ViewModel extensions."/>
+	<item text="SJWalls: Improve getting wallpapers data."/>
+	<item text="SJWalls: Hide keyboard on search submission"/>
+	<item text="SJWalls: Set min api to API 21 (Lollipop RIP NOW)"/>
+	<item text="SJWalls: Updated Notification Services" />
+	<item text="SJWalls: Updated Slow data issue" />
+	<item text="SJWalls: Merged 3.1.9 changes" />
 </resources>

@@ -2,6 +2,8 @@
 
 object Frames {
     const val appId = "com.shaikjaleel.SJWalls"
-    const val version = 109
-    const val versionName = "1.0.9"
+    const val AppName = "SJWalls"
+    const val version = 110
+    const val versionName = "1.1.0"
+	const val versionDashboard = "3.1.9"
 }
