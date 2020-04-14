@@ -26,11 +26,12 @@ Free, feature-rich, wallpapers app
 ### Customizable styles
 
 <p align="center">
-<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/sjwalls1.jpg" height="350"/>
-<img src="ahttps://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls2.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls1.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls2.jpg" height="350"/>
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls3.jpg" height="350"/>
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls4.jpg" height="350"/>
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls5.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls6.jpg" height="350"/>
 </p>
 
 ### Full-screen Viewer / Multiple themes
