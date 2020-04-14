@@ -1,4 +1,4 @@
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/app_logo.png" width="192" align="right" hspace="20" />
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sj_logo.png" width="192" align="right" hspace="20" />
 
 SJWALLS BY SHAIK JALEEL
 ======
@@ -26,11 +26,11 @@ Free, feature-rich, wallpapers app
 ### Customizable styles
 
 <p align="center">
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/1.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/2.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/3.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/4.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/5.png" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/sjwalls1.jpg" height="350"/>
+<img src="ahttps://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls2.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls3.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls4.jpg" height="350"/>
+<img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls5.jpg" height="350"/>
 </p>
 
 ### Full-screen Viewer / Multiple themes
