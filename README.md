@@ -23,7 +23,7 @@ Free, feature-rich, wallpapers app
 
 # Previews
 
-### Customizable styles
+### Screenshots
 
 <p align="center">
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls1.jpg" height="350"/>
@@ -32,22 +32,6 @@ Free, feature-rich, wallpapers app
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls4.jpg" height="350"/>
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls5.jpg" height="350"/>
 <img src="https://github.com/iamsj7/SJWalls-APP/blob/STABLE-UPSTREAM/art/sjwalls6.jpg" height="350"/>
-</p>
-
-### Full-screen Viewer / Multiple themes
-
-<p align="center">
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/6.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/7.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/8.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/9.png" height="350"/>
-</p>
-
-### Credits / Settings
-
-<p align="center">
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/10.png" height="350"/>
-<img src="https://github.com/jahirfiquitiva/Frames/raw/master/art/11.png" height="350"/>
 </p>
 
 ---
