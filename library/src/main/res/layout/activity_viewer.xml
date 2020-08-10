@@ -74,7 +74,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <dev.jahir.frames.ui.widgets.FramesBottomNavigationView
+    <com.nerdinfusions.sjwalls.ui.widgets.FramesBottomNavigationView
         android:id="@+id/bottom_navigation"
         style="@style/Widget.Frames.ViewerBottomNavigationView"
         android:layout_width="match_parent"

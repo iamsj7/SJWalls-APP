@@ -1,0 +1,150 @@
+package com.nerdinfusions.sjwalls.ui.activities.base
+
+import android.os.Bundle
+import android.view.Menu
+import androidx.appcompat.app.AlertDialog
+import com.android.billingclient.api.SkuDetails
+import com.nerdinfusions.sjwalls.R
+import com.nerdinfusions.sjwalls.data.Preferences
+import com.nerdinfusions.sjwalls.data.listeners.BillingProcessesListener
+import com.nerdinfusions.sjwalls.data.models.CleanSkuDetails
+import com.nerdinfusions.sjwalls.data.models.DetailedPurchaseRecord
+import com.nerdinfusions.sjwalls.data.viewmodels.BillingViewModel
+import com.nerdinfusions.sjwalls.extensions.context.getAppName
+import com.nerdinfusions.sjwalls.extensions.context.string
+import com.nerdinfusions.sjwalls.extensions.context.stringArray
+import com.nerdinfusions.sjwalls.extensions.fragments.mdDialog
+import com.nerdinfusions.sjwalls.extensions.fragments.message
+import com.nerdinfusions.sjwalls.extensions.fragments.negativeButton
+import com.nerdinfusions.sjwalls.extensions.fragments.positiveButton
+import com.nerdinfusions.sjwalls.extensions.fragments.singleChoiceItems
+import com.nerdinfusions.sjwalls.extensions.fragments.title
+import com.nerdinfusions.sjwalls.extensions.resources.hasContent
+import com.nerdinfusions.sjwalls.extensions.utils.lazyViewModel
+import com.nerdinfusions.sjwalls.ui.fragments.viewer.IndeterminateProgressDialog
+
+@Suppress("MemberVisibilityCanBePrivate")
+abstract class BaseBillingActivity<out P : Preferences> : BaseLicenseCheckerActivity<P>(),
+    BillingProcessesListener {
+
+    val billingViewModel: BillingViewModel by lazyViewModel()
+    val isBillingClientReady: Boolean
+        get() = billingEnabled && billingViewModel.isBillingClientReady
+
+    private val billingLoadingDialog: IndeterminateProgressDialog by lazy { IndeterminateProgressDialog.create() }
+    private var purchasesDialog: AlertDialog? = null
+
+    open val billingEnabled: Boolean = false
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        if (billingEnabled) {
+            billingViewModel.billingProcessesListener = this
+            billingViewModel.observe(this)
+            billingViewModel.initialize()
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val created = super.onCreateOptionsMenu(menu)
+        menu?.findItem(R.id.donate)?.isVisible =
+            isBillingClientReady && getDonationItemsIds().isNotEmpty()
+        return created
+    }
+
+    private fun dismissDialogs() {
+        try {
+            billingLoadingDialog.dismiss()
+        } catch (e: Exception) {
+        }
+        try {
+            purchasesDialog?.dismiss()
+        } catch (e: Exception) {
+        }
+        purchasesDialog = null
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dismissDialogs()
+        billingViewModel.destroy(this)
+    }
+
+    fun showDonationsDialog() {
+        if (!isBillingClientReady) {
+            onSkuPurchaseError()
+            return
+        }
+        val skuDetailsList = billingViewModel.inAppSkuDetails.map { CleanSkuDetails(it) }
+            .filter { getDonationItemsIds().contains(it.originalDetails.sku) }
+        if (skuDetailsList.isEmpty()) {
+            onSkuPurchaseError()
+            return
+        }
+        dismissDialogs()
+        purchasesDialog = mdDialog {
+            title(R.string.donate)
+            singleChoiceItems(skuDetailsList, 0) { _, which ->
+                billingViewModel.launchBillingFlow(
+                    this@BaseBillingActivity,
+                    skuDetailsList[which].originalDetails
+                )
+            }
+            negativeButton(android.R.string.cancel)
+            positiveButton(R.string.donate)
+        }
+        purchasesDialog?.show()
+    }
+
+    override fun onSkuPurchaseSuccess(purchase: DetailedPurchaseRecord?) {
+        dismissDialogs()
+        purchasesDialog = mdDialog {
+            title(R.string.donate_success_title)
+            message(string(R.string.donate_success_content, getAppName()))
+            positiveButton(android.R.string.ok)
+        }
+        purchasesDialog?.show()
+    }
+
+    override fun onSkuPurchaseError(purchase: DetailedPurchaseRecord?) {
+        dismissDialogs()
+        purchasesDialog = mdDialog {
+            title(R.string.error)
+            message(string(R.string.unexpected_error_occurred))
+        }
+        purchasesDialog?.show()
+    }
+
+    override fun onBillingClientReady() {
+        super.onBillingClientReady()
+        invalidateOptionsMenu()
+        val inAppItems =
+            ArrayList(getDonationItemsIds()).apply { addAll(getInAppPurchasesItemsIds()) }
+        billingViewModel.queryInAppSkuDetailsList(inAppItems)
+        billingViewModel.querySubscriptionsSkuDetailsList(getSubscriptionsItemsIds())
+    }
+
+    override fun onInAppSkuDetailsListUpdated(skuDetailsList: List<SkuDetails>) {
+        super.onInAppSkuDetailsListUpdated(skuDetailsList)
+        invalidateOptionsMenu()
+    }
+
+    override fun onSubscriptionsSkuDetailsListUpdated(skuDetailsList: List<SkuDetails>) {
+        super.onSubscriptionsSkuDetailsListUpdated(skuDetailsList)
+        invalidateOptionsMenu()
+    }
+
+    override fun onBillingClientDisconnected() {
+        super.onBillingClientDisconnected()
+        invalidateOptionsMenu()
+    }
+
+    open fun getDonationItemsIds(): List<String> = try {
+        stringArray(R.array.donation_items).filter { it.hasContent() }
+    } catch (e: Exception) {
+        listOf()
+    }
+
+    open fun getInAppPurchasesItemsIds(): List<String> = listOf()
+    open fun getSubscriptionsItemsIds(): List<String> = listOf()
+}
