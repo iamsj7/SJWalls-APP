@@ -121,5 +121,5 @@ open class AboutActivity : BaseThemedActivity<Preferences>() {
     @Suppress("MemberVisibilityCanBePrivate")
     open fun getAdditionalInternalAboutItems(): ArrayList<AboutItem> = arrayListOf()
 
-    open fun shouldIncludeContributors(): Boolean = true
+    open fun shouldIncludeContributors(): Boolean = false
 }
