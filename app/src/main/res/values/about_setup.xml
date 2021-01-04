@@ -6,22 +6,22 @@
     </string-array>
 
     <string-array name="credits_titles">
-        <item>Your Name</item>
-        <item>Another Name</item>
+        <item>Shaik Jaleel</item>
+        <item>Asif Mohammed</item>
     </string-array>
 
     <string-array name="credits_descriptions">
-        <item>Details of first credited person</item>
-        <item>Details of another credited person</item>
+        <item>Android Frameworks Engineer</item>
+        <item>Moderator</item>
     </string-array>
 
     <string-array name="credits_buttons">
-        <item>Google+|Instagram</item>
+        <item>Website|Instagram</item>
         <item>Facebook|Website|Twitter</item>
     </string-array>
 
     <string-array name="credits_links">
-        <item>https://www.google.com/+JahirFiquitivaR|http://instagram.com/jahirfiquitiva</item>
-        <item>https://facebook.com/|https://jahir.dev/|https://twitter.com/jahirfiquitiva</item>
+        <item>https://shaikjaleel.tech|http://instagram.com/iamshaikjaleel</item>
+        <item>https://facebook.com/iamsjz|https://shaikjaleel.tech/|https://twitter.com/iamshaikjaleel</item>
     </string-array>
 </resources>

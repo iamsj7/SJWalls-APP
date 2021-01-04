@@ -20,7 +20,7 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
--keep class dev.jahir.frames.** { *; }
+-keep class com.nerdinfusions.sjwalls.** { *; }
 
 -keep class com.google.**
 -keep class autovalue.shaded.com.google.**

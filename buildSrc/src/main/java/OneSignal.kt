@@ -1,6 +1,6 @@
 @file:Suppress("unused")
 
 object OneSignal {
-    const val appId = "965921b5-91a2-45b8-a960-a9f28948a781"
-    const val googleProjectNumber = "191533712411"
+    const val appId = "79daf745-fd98-48aa-8a9e-2157ce6d687d"
+    const val googleProjectNumber = "986994863557"
 }

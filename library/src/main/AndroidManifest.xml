@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="dev.jahir.frames">
+    package="com.nerdinfusions.sjwalls">
 
     <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
     <uses-permission
@@ -32,24 +32,24 @@
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute">
 
         <activity
-            android:name=".ui.activities.FramesActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.FramesActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.activities.ViewerActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.ViewerActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.activities.CollectionActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.CollectionActivity"
             android:exported="false" />
 
         <activity
-            android:name=".ui.activities.AboutActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.AboutActivity"
             android:exported="false"
             android:label="@string/about" />
 
         <activity
-            android:name=".ui.activities.SettingsActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.SettingsActivity"
             android:label="@string/settings">
             <intent-filter>
                 <action android:name="android.intent.action.APPLICATION_PREFERENCES" />
@@ -58,7 +58,7 @@
         </activity>
 
         <activity
-            android:name=".ui.activities.MuzeiSettingsActivity"
+            android:name="com.nerdinfusions.sjwalls.ui.activities.MuzeiSettingsActivity"
             android:exported="true"
             android:label="@string/muzei_settings" />
 

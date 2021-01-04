@@ -1,12 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="dev.jahir.frames.app">
+    package="com.nerdinfusions.sjwalls.app">
 
     <!-- Permission required for donations. Remove it if you don't use it -->
     <uses-permission android:name="com.android.vending.BILLING" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.nerdinfusions.sjwalls.app.MyApplication"
         android:allowBackup="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +19,7 @@
         tools:ignore="UnusedAttribute">
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.nerdinfusions.sjwalls.app.MainActivity"
             android:label="@string/app_name">
 
             <!-- TODO: Do NOT remove the intent-filter tags -->
@@ -74,7 +74,7 @@
 
         <!-- Muzei Service -->
         <provider
-            android:name=".MuzeiService"
+            android:name="com.nerdinfusions.sjwalls.app.MuzeiService"
             android:authorities="${applicationId}.muzei"
             android:exported="true"
             android:icon="@drawable/ic_muzei_icon"
@@ -93,7 +93,6 @@
         </provider>
 
         <!-- OneSignal Notifications Service -->
-        <!-- TODO: Remove comment marks to enable
         <service
             android:name=".NotificationService"
             android:exported="false"
@@ -102,6 +101,5 @@
                 <action android:name="com.onesignal.NotificationExtender" />
             </intent-filter>
         </service>
-        -->
     </application>
 </manifest>

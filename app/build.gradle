@@ -1,5 +1,5 @@
 // TODO: Remove comment marks to enable
-/*
+
 buildscript {
     repositories {
         maven { url 'https://plugins.gradle.org/m2/' }
@@ -11,7 +11,7 @@ buildscript {
 }
 
 apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
-*/
+apply plugin: 'com.google.gms.google-services'
 
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -104,5 +104,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':library')
     // TODO: Remove comment marks to enable
-    // implementation Libs.oneSignal
+    implementation Libs.oneSignal
+    implementation platform('com.google.firebase:firebase-bom:26.2.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 }

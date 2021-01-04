@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center" />
 
-    <dev.jahir.frames.ui.widgets.PortraitImageView
+    <com.nerdinfusions.sjwalls.ui.widgets.PortraitImageView
         android:id="@+id/wallpaper_image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
 
         </LinearLayout>
 
-        <dev.jahir.frames.ui.widgets.FavoriteCheckbox
+        <com.nerdinfusions.sjwalls.ui.widgets.FavoriteCheckbox
             android:id="@+id/fav_button"
             android:layout_width="24dp"
             android:layout_height="24dp"

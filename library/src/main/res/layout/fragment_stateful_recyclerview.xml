@@ -25,7 +25,7 @@
             android:clipToPadding="false"
             android:gravity="center" />
 
-        <dev.jahir.frames.ui.widgets.StatefulRecyclerView
+        <com.nerdinfusions.sjwalls.ui.widgets.StatefulRecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
